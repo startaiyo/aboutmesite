@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Blog;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+Route::get('/blogs',function(Request $request){
+    $blogs = Blog::all();
+    return response()->json(['blogs'=>$blogs]);
+});
+Route::get('/blogs/{blog}',function(Blog $blog){
+    return response()->json(['blog'=>$blog]);
+});
+Route::patch('/blogs/{blog}',function(Blog $blog, Request $request){
+    $blog->update($request->blog);
+    return response()->json(['blog'=>$blog]);
 });
