@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>UserId: {{blog.id}}</h1>
+        <h1>BlogId: {{blog.id}}</h1>
         <form @submit.prevent="updateBlog">
             <div>
                 <label for="title">title:</label>

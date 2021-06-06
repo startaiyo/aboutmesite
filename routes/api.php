@@ -29,3 +29,11 @@ Route::patch('/blogs/{blog}',function(Blog $blog, Request $request){
     $blog->update($request->blog);
     return response()->json(['blog'=>$blog]);
 });
+Route::delete('/blogs/{blog}',function(Blog $blog){
+	$blog->delete();
+	return response()->json(['message' => 'delete successfully']);
+});
+Route::post('/blogs', function(Request $request){
+	$blog = Blog::create($request->blog);
+	return response()->json(['blog' => $blog]);
+});
