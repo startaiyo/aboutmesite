@@ -5,7 +5,7 @@ import NotFound from './views/NotFound.vue';
 import Blogs from './views/Blogs.vue';
 import BlogsDetail from './views/BlogsDetail.vue';
 import BlogsEdit from './views/BlogsEdit.vue';
-
+import BlogsCreate from './views/BlogsCreate.vue';
 export default new Router({
     mode: 'history',
     routes: [
@@ -22,6 +22,11 @@ export default new Router({
         path: '/blogs',
         name: 'blogs',
         component: Blogs
+      },
+      {
+        path: '/blogs/create',
+        name: 'blogs_create',
+        component: BlogsCreate
       },
       {
         path: '/blogs/:id',
