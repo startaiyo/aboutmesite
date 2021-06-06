@@ -2,3 +2,4 @@
 {{$value->id}}<br>
 {{$value->text}}<br>
 @endforeach
+<a>hogetarou</a>

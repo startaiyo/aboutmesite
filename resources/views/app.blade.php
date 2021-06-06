@@ -14,7 +14,11 @@
 </head>
 <body>
 <div id="app">
-    <example-component></example-component>
+    <div id = "nav">
+      <router-link to = "/">Home</router-link>
+      <router-link to = "/blogs">blog</router-link>
+      <router-view/>
+    </div>
 </div>
 <!-- Scripts -->
 <script src="{{ mix('/js/app.js') }}" defer></script>
