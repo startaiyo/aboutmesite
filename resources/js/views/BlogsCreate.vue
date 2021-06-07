@@ -9,7 +9,7 @@
 		</div>
 		<div class="form-group">
 			<label for="text">Text:</label>
-			<input v-model="blog.text">
+			<textarea v-model="blog.text" style="height:200px; width:300px;"/>
 		</div>
 		<button type="submit">作成</button>
 	</form>
