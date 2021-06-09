@@ -3,7 +3,7 @@
     <h1>Startaiyo's Portfolio</h1>
     <div class = "history">
       <h2>My History</h2>
-      <button v-on:click="openModal">1998</button>
+      <light-timeline :items="items"></light-timeline>
       <div id="overlay" v-show="showContent" v-on:click="closeModal">
         <div id="content">
           <p>これがモーダルウィンドウです。</p>
@@ -40,10 +40,31 @@
 }
 </style>
 <script>
+import Vue from 'vue';
+import LightTimeline from 'vue-light-timeline';
+Vue.use(LightTimeline);
 export default {
   data() {
+    const example1 = {
+      title: "Title1",
+      htmlMode:true,
+      content:
+        `<button v-on:click="openModal">1998</button>`
+    };
+    const example2 = {
+      title: "Title2",
+      content:
+        "テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト"
+    };
+    const example3 = {
+      title: "Title3",
+      content:
+        "テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト"
+    };
+    const items = [example1, example2, example3];    
     return{
-      showContent: false
+      showContent: false,
+      items
       }
   },
   methods:{

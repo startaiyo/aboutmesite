@@ -26,6 +26,8 @@
     },
     "dependencies": {
         "moment": "^2.29.1",
+        "vue-horizontal-timeline": "^0.9.1",
+        "vue-light-timeline": "^1.0.3",
         "vue-router": "^3.5.1"
     }
 }
