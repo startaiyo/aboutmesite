@@ -2157,6 +2157,64 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 vue__WEBPACK_IMPORTED_MODULE_1__.default.use((vue_light_timeline__WEBPACK_IMPORTED_MODULE_0___default()));
@@ -2165,7 +2223,7 @@ vue__WEBPACK_IMPORTED_MODULE_1__.default.use((vue_light_timeline__WEBPACK_IMPORT
     var example1 = {
       title: "Title1",
       htmlMode: true,
-      content: "<button v-on:click=\"openModal\">1998</button>"
+      content: "<button onclick=\"openModal()\">1998</button>"
     };
     var example2 = {
       title: "Title2",
@@ -6796,7 +6854,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#overlay{\n  z-index:1;\n  position:fixed;\n  top:0;\n  left:0;\n  width:100%;\n  height:100%;\n  background-color:rgba(0,0,0,0.5);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n#content{\n  z-index:2;\n  width:50%;\n  padding: 1em;\n  background:#fff;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#overlay{\n  z-index:1;\n  position:fixed;\n  top:0;\n  left:0;\n  width:100%;\n  height:100%;\n  background-color:rgba(0,0,0,0.5);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n#content{\n  z-index:2;\n  width:50%;\n  padding: 1em;\n  background:#fff;\n}\n.timeline {\n  list-style: none;\n}\n.timeline > li {\n  margin-bottom: 60px;\n}\n\n/* for Desktop */\n@media ( min-width : 640px ){\n.timeline > li {\n    overflow: hidden;\n    margin: 0;\n    position: relative;\n}\n.timeline-date {\n    width: 110px;\n    float: left;\n    margin-top: 20px;\n}\n.timeline-content {\n    width: 75%;\n    float: left;\n    border-left: 3px #e5e5d1 solid;\n    padding-left: 30px;\n}\n.timeline-content:before {\n    content: '';\n    width: 12px;\n    height: 12px;\n    background: #6fc173;\n    position: absolute;\n    left: 106px;\n    top: 24px;\n    border-radius: 100%;\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -60129,50 +60187,109 @@ var render = function() {
   return _c("div", [
     _c("h1", [_vm._v("Startaiyo's Portfolio")]),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "history" },
-      [
-        _c("h2", [_vm._v("My History")]),
-        _vm._v(" "),
-        _c("light-timeline", { attrs: { items: _vm.items } }),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            directives: [
+    _c("div", { staticClass: "history" }, [
+      _c("h2", [_vm._v("My History")]),
+      _vm._v(" "),
+      _c("ul", { staticClass: "timeline" }, [
+        _c("li", [
+          _c("p", { staticClass: "timeline-date" }, [_vm._v("2007年2月")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "timeline-content" }, [
+            _c(
+              "button",
               {
-                name: "show",
-                rawName: "v-show",
-                value: _vm.showContent,
-                expression: "showContent"
-              }
-            ],
-            attrs: { id: "overlay" },
-            on: { click: _vm.closeModal }
-          },
-          [
-            _c("div", { attrs: { id: "content" } }, [
-              _c("p", [_vm._v("これがモーダルウィンドウです。")]),
-              _vm._v(" "),
-              _c("p", [
-                _c("button", { on: { click: _vm.closeModal } }, [
-                  _vm._v("close")
-                ])
-              ])
+                on: {
+                  click: function($event) {
+                    return _vm.openModal()
+                  }
+                }
+              },
+              [_vm._v("1998")]
+            ),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "ワーホリビザで渡加。アクセサリーショップ等でバイト。カナダ生活を満喫。"
+              )
             ])
-          ]
-        )
-      ],
-      1
-    ),
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._m(1)
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.showContent,
+              expression: "showContent"
+            }
+          ],
+          attrs: { id: "overlay" },
+          on: { click: _vm.closeModal }
+        },
+        [
+          _c("div", { attrs: { id: "content" } }, [
+            _c("p", [_vm._v("これがモーダルウィンドウです。")]),
+            _vm._v(" "),
+            _c("p", [
+              _c("button", { on: { click: _vm.closeModal } }, [_vm._v("close")])
+            ])
+          ])
+        ]
+      )
+    ]),
     _vm._v(" "),
-    _vm._m(0),
+    _vm._m(2),
     _vm._v(" "),
-    _vm._m(1)
+    _vm._m(3)
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("p", { staticClass: "timeline-date" }, [_vm._v("2008年3月")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "timeline-content" }, [
+        _c("h3", [_vm._v("Webの専門学校に入学")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "有給インターンシップ付きの一年プログラムを受講。HTML、CSS、JavaScript、PHP等のコーディングやWebデザインの基礎を学ぶ。"
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("p", { staticClass: "timeline-date" }, [_vm._v("2009年2月")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "timeline-content" }, [
+        _c("h3", [
+          _vm._v("バンクーバーのWeb制作会社でWebデザイナーとして働く")
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "私以外全員カナダ人という環境で英語やWebの技術を学びながら必死に働く"
+          )
+        ])
+      ])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
