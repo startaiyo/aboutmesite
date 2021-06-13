@@ -13,11 +13,14 @@
             mdi-pencil
           </v-icon>
         </v-btn>
+
+    <v-layout class="row" style="margin-top:10px">
+    <div v-for="blog in blogs"
+        v-bind:key="blog.id">
+    <v-flex xs4>        
     <v-card
         class="mx-auto"
-        max-width="344"
-        v-for="blog in blogs"
-        v-bind:key="blog.id"
+        min-width="344"
     >
 
         <v-card-title>
@@ -62,6 +65,10 @@
         </div>
         </v-expand-transition>
     </v-card>
+    </v-flex>
+    </div>
+    </v-layout>
+    
 </div>
 </template>
 <script>
