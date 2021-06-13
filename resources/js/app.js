@@ -9,8 +9,19 @@ require('./bootstrap');
 import VueRouter from 'vue-router';
 import router from './router';
 
+
+
 window.Vue = require('vue').default;
 Vue.use(VueRouter);
+
+
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -29,8 +40,21 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+import Vuetify from 'vuetify'; //★
+import 'vuetify/dist/vuetify.min.css'; //★
+import '@mdi/font/css/materialdesignicons.css'; //★
+Vue.use(Vuetify); //★
 
+export default new Vuetify({
+    icons: {
+        iconfont: 'mdi'
+    },
+    theme: {
+        dark: true,
+    }
+})
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    vuetify: new Vuetify(), 
 });

@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1>Startaiyo's Portfolio</h1>
+    <div class = "profile">
+      <h2>My Profile</h2>
+    </div>
     <div class = "history">
       <h2>My History</h2>
       <ul class="timeline">
@@ -35,6 +38,18 @@
     </div>
     <div class = "blogs">
       <h2>My Blogs</h2>
+        <v-btn
+          class="mx-2"
+          fab
+          dark
+          large
+          color="cyan"
+          v-on:click="openModal()"
+        >
+          <v-icon dark>
+            mdi-pencil
+          </v-icon>
+        </v-btn>
     </div>
     <div class = "works">
       <h2>My Works</h2>
@@ -98,34 +113,11 @@
 }
 </style>
 <script>
-import Vue from 'vue';
-import LightTimeline from 'vue-light-timeline';
-Vue.use(LightTimeline);
-
 export default {
-  data() {
-    const example1 = {
-      title: "Title1",
-      htmlMode:true,
-      content:
-        `<button onclick="openModal()">1998</button>`
-    };
-    const example2 = {
-      title: "Title2",
-      content:
-        "テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト"
-    };
-    const example3 = {
-      title: "Title3",
-      content:
-        "テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト"
-    };
-    const items = [example1, example2, example3];    
+  data() { 
     return{
       showContent: false,
-      items
       }
-    
   },
     methods:{
       openModal: function(){
