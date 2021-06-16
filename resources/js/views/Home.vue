@@ -53,6 +53,7 @@
     </div>
     <div class = "works">
       <h2>My Works</h2>
+      <works></works>
     </div>
   </div>
 </template>
