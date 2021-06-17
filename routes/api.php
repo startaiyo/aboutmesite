@@ -25,6 +25,11 @@ Route::get('/blogs',function(Request $request){
 Route::get('/blogs/{blog}',function(Blog $blog){
     return response()->json(['blog'=>$blog]);
 });
+// /のあとは１単語
+// Route::get('/blogscd',function(Request $request){
+//     $blogs = Blog::all();
+//     return response()->json(['blogs'=>$blogs]);
+// });
 Route::patch('/blogs/{blog}',function(Blog $blog, Request $request){
     $blog->update($request->blog);
     return response()->json(['blog'=>$blog]);
