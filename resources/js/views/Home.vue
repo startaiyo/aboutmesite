@@ -131,16 +131,23 @@ export default {
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
           }
-        ]
+        ],
+      blogs:[],
     }
   },
-    methods:{
-      openModal: function(){
-        this.showContent = true
-      },
-      closeModal: function(){
-        this.showContent = false
-      }
+  methods:{
+    openModal: function(){
+      this.showContent = true
     },
+    closeModal: function(){
+      this.showContent = false
+    }
+  },
+  created(){
+    axios.get('/api/blogs')
+    .then(res=>{this.blogs=res.data.blogs.slice(0,4)})
+    .then(()=>{console.log(this.blogs)})
+    .catch(e=>console.log(e));
+  },
 }
 </script>
