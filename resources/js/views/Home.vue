@@ -38,18 +38,18 @@
     </div>
     <div class = "blogs">
       <h2>My Blogs</h2>
-  <v-carousel 
-    cycle
-    :show-arrows="false"
-    style="width:50%">
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-      reverse-transition="fade-transition"
-      transition="fade-transition"
-    ></v-carousel-item>
-  </v-carousel>
+  <v-sheet>
+    <!-- <v-slide-group>
+      <v-slide-item v-for="item in blogs" :key="item.id">
+        <v-card style="margin: 0 20px 0 0; width: 320px; height: 240px;">
+          <v-card-title>sample title {{ item.title }}</v-card-title>
+          <v-card-text class="text--primary">
+          {{item.text}}
+          </v-card-text>
+        </v-card>
+      <v-slide-item>
+    </v-slide-group> -->
+  </v-sheet>
     </div>
     <div class = "works">
       <h2>My Works</h2>
