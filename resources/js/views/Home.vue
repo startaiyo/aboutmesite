@@ -37,18 +37,20 @@
       </div>
     </div>
     <div class = "blogs">
-      <h2>My Blogs</h2>
+      <h2>My Blogs (recent 4 contents)</h2>
   <v-sheet>
-    <!-- <v-slide-group>
-      <v-slide-item v-for="item in blogs" :key="item.id">
+    <v-slide-group>
+      <v-slide-item 
+      v-for="blog in blogs" 
+      v-bind:key="blog.id">
         <v-card style="margin: 0 20px 0 0; width: 320px; height: 240px;">
-          <v-card-title>sample title {{ item.title }}</v-card-title>
-          <v-card-text class="text--primary">
-          {{item.text}}
+          <v-card-title>{{ blog.title }}</v-card-title>
+          <v-card-text class="text--primary" style="overflow:hidden; white-space:nowrap; text-overflow:ellipsis">
+          {{blog.text}}
           </v-card-text>
         </v-card>
-      <v-slide-item>
-    </v-slide-group> -->
+      </v-slide-item>
+    </v-slide-group>
   </v-sheet>
     </div>
     <div class = "works">
