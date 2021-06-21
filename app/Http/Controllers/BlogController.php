@@ -18,4 +18,12 @@ class BlogController extends Controller
         dd($blogs);
         return view('blogs.blog',compact('values'));
     }
+
+    public function __construct()
+    {
+        $this->middleware('auth')->only(['create', 'store', 'edit', 'update', 'delete']);
+        // 追加
+        $this->middleware('can:update,blog')->only(['edit', 'update']);
+        $this->middleware('verified')->only('create');
+    }
 }
