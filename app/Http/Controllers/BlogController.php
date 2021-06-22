@@ -21,9 +21,9 @@ class BlogController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->only(['create', 'store', 'edit', 'update', 'delete']);
-        // 追加
-        $this->middleware('can:update,blog')->only(['edit', 'update']);
-        $this->middleware('verified')->only('create');
+        // $this->middleware('auth')->only(['create', 'store', 'edit', 'update', 'delete']);
+        // // 追加
+        // $this->middleware('can:update,blog')->only(['edit', 'update']);
+        // $this->middleware('verified')->only('create');
     }
 }

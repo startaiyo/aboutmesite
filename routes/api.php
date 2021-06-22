@@ -15,9 +15,6 @@ use App\Models\Blog;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
 Route::get('/blogs',function(Request $request){
     $blogs = Blog::all();
     return response()->json(['blogs'=>$blogs]);
@@ -42,3 +39,7 @@ Route::post('/blogs', function(Request $request){
 	$blog = Blog::create($request->blog);
 	return response()->json(['blog' => $blog]);
 });
+
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
