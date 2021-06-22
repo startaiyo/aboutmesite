@@ -16,3 +16,7 @@ Route::get('/{any}', function() {
     return view('app');
 })->where('any', '.*');
 Route::get('blogs/blog','App\Http\Controllers\BlogController@index');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
