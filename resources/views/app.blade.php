@@ -16,6 +16,10 @@
 <div id="app">
     <div id = "nav">
       <navbar></navbar>
+      <a href="/login">login</a>
+      @can('all')
+      <form action="/logout" method="POST">@csrf<button type="submit">logout</button></form>
+      @endcan
       <router-view/>
     </div>
 </div>
