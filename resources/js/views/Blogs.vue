@@ -13,7 +13,7 @@
             mdi-pencil
           </v-icon>
         </v-btn>
-
+    
     <v-layout class="row" style="margin-top:10px">
     <div v-for="blog in blogs"
         v-bind:key="blog.id">

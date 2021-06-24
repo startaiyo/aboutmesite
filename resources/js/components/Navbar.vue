@@ -39,3 +39,9 @@
     </v-sheet>
   </v-card>
   </template>
+<script>
+export default {
+  props: {
+  },
+}
+</script>
