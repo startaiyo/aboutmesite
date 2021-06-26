@@ -21,9 +21,11 @@
       <form action="/logout" method="POST">@csrf<button type="submit">logout</button></form>
       @endcan
       @can('admin')
-      <h1>あなたはadminです</h1>
-      @endcan
+      <router-view role="{{ Auth::user()->role }}"/>
+      @else
       <router-view/>
+      @endcan
+      
     </div>
 </div>
 <!-- Scripts -->

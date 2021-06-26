@@ -35,13 +35,10 @@ Route::delete('/blogs/{blog}',function(Blog $blog){
 	$blog->delete();
 	return response()->json(['message' => 'delete successfully']);
 });
-Route::group(['middleware' =>'admin_auth'],function(){
-    Route::post('/blogs', function(Request $request){
-        $blog = Blog::create($request->blog);
-        return response()->json(['blog' => $blog]);
-    });
+Route::post('/blogs', function(Request $request){
+    $blog = Blog::create($request->blog);
+    return response()->json(['blog' => $blog]);
 });
-
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
