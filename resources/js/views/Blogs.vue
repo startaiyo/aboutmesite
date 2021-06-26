@@ -8,6 +8,7 @@
           large
           color="cyan"
           to="/blogs/create"
+          v-if = "role==5"
         >
           <v-icon dark>
             mdi-pencil
@@ -75,6 +76,9 @@
 import moment from "moment"
 import Vue from "vue";
 export default {
+    props:{
+        role: String,
+    },
     data(){
         return{
             blogs:[],
