@@ -1,6 +1,6 @@
 <template>
 <div>
-    <h1>blogだよ</h1>
+    <h1>startaiyoのblog</h1>
         <v-btn
           class="mx-2"
           fab
@@ -37,8 +37,8 @@
 
         <v-card-actions>
         <router-link :to ="`/blogs/${blog.id}`"><v-btn>detail</v-btn></router-link>
-        <router-link :to ="`/blogs/${blog.id}/edit`"><v-btn>edit</v-btn></router-link>
-        <span class="btn btn-danger" @click="blogsDelete(index, blog.id)">削除</span>
+        <router-link :to ="`/blogs/${blog.id}/edit`" v-if = "role==5"><v-btn>edit</v-btn></router-link>
+        <span class="btn btn-danger" @click="blogsDelete(index, blog.id)" v-if = "role==5">削除</span>
         <v-spacer></v-spacer>
 
         <v-btn
