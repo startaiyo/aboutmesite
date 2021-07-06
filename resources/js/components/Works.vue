@@ -34,7 +34,7 @@
                         {{ item.text }}
                       </p>
                       <p class="text-caption font-weight-medium font-italic text-left">
-                        {{ item.subtext }}
+                        From {{ item.sd|moment }}
                       </p>
                     </div>
 
@@ -79,26 +79,32 @@
 </style>
 
 <script>
+  import moment from 'moment';
   export default {
+    filters: {
+      moment: function(date){
+        return moment(date).fromNow();
+      }
+    },
     data: () => ({
       icons: ['mdi-rewind', 'mdi-play', 'mdi-fast-forward'],
       items: [
         {
           title: 'Python',
           text: `For create apps`,
-          subtext: 'For 6 month',
+          sd: '2020/12/14 23:10',
           // img: 'https://images.unsplash.com/photo-1429514513361-8fa32282fd5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3264&q=80',
         },
         {
           title: 'Ruby',
           text: 'For create apps',
-          subtext: 'For 2 month',
+          sd: '2021/02/11 23:10',
           // img: 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
         },
         {
           title: 'PHP',
           text: 'For create portfolio site',
-          subtext: 'For 0.5 month',
+          sd: '2021/06/01 23:10',
           // img: 'https://images.unsplash.com/photo-1542320868-f4d80389e1c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80',
         },
       ],
